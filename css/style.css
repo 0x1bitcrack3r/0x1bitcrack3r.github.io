@@ -1,0 +1,342 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+
+.dark-primary-color    { background: #01419f; }
+.default-primary-color { background: #1976d2; }
+.light-primary-color   { background: #2196f3; }
+.text-primary-color    { color: #FFFFFF; }
+.accent-color          { background: #424242; }
+.accent-color-text     { color: #e23237; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #727272; }
+.divider-color         { border-color: #B6B6B6; }
+.button-color		   { background: #1976d2;}
+
+.nav {background-color: #455A64 !important;}
+
+.logo-large {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 0 0 0;
+}
+
+.photo-large {
+  display: block;
+  margin: 0 auto;
+
+  padding: 40px 0 0 0;
+}
+
+img.logo {
+  width: 60px;
+  height: auto;
+}
+
+a#logo-container {
+  width: 60px;
+  height: auto;
+}
+
+h5.header.col.s12 {
+  padding-bottom: 30px;
+  margin-top: 0;
+}
+
+div#sub-header {
+	background: #286bb4 url(../images/skyline.svg) no-repeat;
+	background-size:100%;
+}
+
+@media only screen and (max-width: 600px) {
+  div#sub-header {
+  background: #286bb4 url(../images/skyline-sm.svg) no-repeat;
+  background-size:100%;
+}
+}
+
+.social-icons, .quick-bio {
+  padding: 0 10px 0 10px;
+}
+
+.page-footer i {
+  font-size: 40px;
+  width: 38px;
+  margin: 0 5px 0 0;
+  text-align: center;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  background: transparent;
+  opacity: 0.2;
+  color: #fff;
+}
+
+.page-footer i:hover {
+  opacity: 1;
+}
+
+.social i {
+  font-size: 40px;
+  width: 38px;
+  margin: 0 8px 0 0;
+  text-align: center;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  background: transparent;
+  color: #1976d2;
+  opacity: 1;
+}
+
+.social i:hover {
+  color: #01419f;
+}
+
+.social .social-icons {
+  padding: 0 20px 0 0;
+}
+
+.fa-twitter:hover, .fa-linkedin:hover, .fa-github:hover, .fa-facebook:hover {opacity: 1;}
+.fa-facebook {margin-left: -8px !important;}
+i.fa.fa-envelope {
+  width: 45px;
+  font-size: 45px;
+}
+
+i.technical  {
+  background: url(../images/curly-braces.svg) no-repeat center;
+  height: 53px;
+  width: 50px;
+  display: block;
+  background-size: 100%;
+  margin: 0 auto;
+  margin-bottom: 31px;
+}
+
+img.portfolio-project {
+	width: 100%;
+  max-width: 1200px;
+}
+
+img.ui-project {
+  width: 24%;
+  max-width: 1200px;
+}
+
+img.ui-project-desktop {
+  width: 48%;
+  max-width: 1200px;
+}
+
+.visit-site {
+	padding: 15px;
+	padding-top: 10px;
+  margin-bottom: 40px;
+
+}
+
+h5.about {padding: 10px 0 10px 0;}
+
+.page-footer div.col.l4.s12 {padding: 30px;}
+
+ul#nav-mobile a {
+  font-size: 1.2em;
+  width: 100%;
+}
+
+ul#nav-mobile li:hover {
+  background-color: #eee;
+}
+
+div.sidenav-header {
+  height: 80px;
+  width: 100%;
+}
+
+.sidenav-header {
+  color: #fff;
+  font-size: 1.5em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+li.title {
+  background: #1976d2;
+}
+
+ul#nav-mobile li.title:hover {
+  background: #1976d2;
+}
+
+img.sidebar-logo {
+  height: 50px;
+  width: 50px;
+  vertical-align: middle;
+  padding-bottom: 3%;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+/* LATEST TWEET STYLES */
+p.interact {
+  display: none;
+}
+
+.user {
+  display: none;
+}
+
+p.tweet {
+  font-size: 15px; 
+  font-weight: 300;
+  color: #FFF;
+  font-style: italic;
+  text-align: center;
+}
+
+p.tweet a {
+  color: rgba(220, 220, 220, 0.8);
+}
+
+p.timePosted {
+  font-size: 15px; 
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+div.quick-bio i.fa.fa-twitter {color: #1976d2;opacity: 1;}
+
+/*  BLOG STYLES  */
+.dateIcon {
+  border-bottom: 3px solid #969696;
+  text-align: left;
+  margin-right: 70px;
+  padding: 0;
+}
+
+.blog-text {
+  text-align: left;
+}
+
+.blog-text h4 {
+  text-align: left;
+  padding-top: 30px;
+}
+
+.blog-text img {
+  max-width: 80px;
+  max-height: 80px;
+  float: right;
+  margin: -58px 0 10px 10px;
+}
+
+pre {
+  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.01);
+  border: 1px solid #eaeaea;
+  border: 1px solid rgba(51, 51, 51, 0.1);
+  line-height: 1.5;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 0.8em;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 13px;
+}
+
+#img-titlebar {
+    max-width: 178px;
+  }
+
+/*  MEDIA QUERIES  */
+
+@media only screen and (max-width: 992px) {
+	img.logo {display: none;}
+	.quick-bio {padding-top: 40px;}
+}
+
+@media only screen and (min-width: 993px) {
+  .logo-large {width: 15%;}
+  img.DOM-example {
+    min-width: 50em !important;
+    min-height: 50em !important;
+    display: block;
+    float: left;
+    margin: 0;
+    margin-left: 3%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .logo-large {width: 30%;}
+  .page-footer div.col.l4.s12 {padding: 0px;}
+  img.DOM-example {
+    min-width: 30em !important;
+    min-height: 30em !important;
+    display: block;
+    float: left;
+    margin: 0;
+    margin-left: 3%;
+  }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1240px) {
+  .page-footer div.col.l4.s12 {padding: 0px;}
+}
+
+@media only screen and (max-width: 500px) {
+  ul.right {display: none;}
+}
+
+@media only screen and (max-width: 600px) {
+  div.sidenav-header {
+    height: 56px;
+  }
+  img.sidebar-logo {
+    max-height: 40px;
+    max-width: 40px;
+  }
+  #img-titlebar {
+    max-width: 130px;
+    padding-top: 10px;
+  }
+  img.DOM-example {
+    min-width: 20em !important;
+    min-height: 20em !important;
+    display: block;
+    float: left;
+    margin: 0;
+    margin-left: 3%;
+  }
+}
+
+#sub-header > h1, #sub-header > div:nth-child(3) > h5 {
+  color: #FFFFFF !important;
+  text-shadow: 1px 1px 4px rgba(6, 57, 102, 1) !important; }
+
+
+code {background-color: rgba(0, 0, 0, 0.03) !important;}
+blockquote {border-left: 5px solid #346bb4 !important;}
+
+a#download-button {
+  margin-right: 10px;
+  min-width: 130px;
+}
