@@ -1,0 +1,35 @@
+<html>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+}
+
+#overlay {
+    z-index: 2;
+    cursor: pointer;
+    position: absolute;
+    top: 307;
+    bottom: 0;
+    left: 627;
+    right: 0;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+</style>
+<script>
+function off() {
+    window.alert("Working");
+}
+</script>
+    <body>
+<img onClick="off()" id="overlay" src="./youtube.png"/>
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/on-X2bjXWrs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </body>
+</html>
