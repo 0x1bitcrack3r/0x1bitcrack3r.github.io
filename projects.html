@@ -3,28 +3,93 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>0x1bitcrack3r</title>
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link href="css/hacker.css" rel="stylesheet" />
-    <style>
-      .tall-row {
-        margin-top: 40px;
-      }
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-      .modal {
-        position: relative;
-        top: auto;
-        right: auto;
-        left: auto;
-        bottom: auto;
-        z-index: 1;
-        display: block;
-      }
-    </style>
+  .card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    overflow: hidden;
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .carousel {
+    position: relative;
+    width: 100%;
+  }
+
+  .carousel img {
+    width: 100%;
+    height: auto;
+    display: none;
+  }
+
+  .carousel img.active {
+    display: block;
+  }
+
+  .carousel .prev,
+  .carousel .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .carousel .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .card-content {
+    padding: 15px;
+  }
+
+  .card-title {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+  }
+
+  .card-text {
+    font-size: 1em;
+    color: #555;
+  }
+
+  .card-link {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+  }
+</style>
   </head>
 
   <body>
@@ -79,180 +144,157 @@
       <div class="jumbotron">
 <div class="row">
   <div class="col m12">
-    <div class="icon-block">
-      <div class="row" style="display: flex;align-items: center;justify-content: space-around">
-        <div class="col s16 m3">
-          <video id="teaser" width="500" height="200" autoplay="" loop="" muted="" playsinline="" poster="https://ibc.imgix.net/ibc-website/home-edition/landing-section-video-poster-image_160(2x).jpg?auto=format,compress&amp;q=80" class="teaser-video lazy-video">
-          <source data-src="https://cdn.ib.cricket/ibc-website/home-edition/ibc-feature-videos/ibc-teaser-video-ds.mp4" type="video/mp4" src="https://cdn.ib.cricket/ibc-website/home-edition/ibc-feature-videos/ibc-teaser-video-ds.mp4">
-        </video>
+      <div class="card">
+        <div class="carousel">
+            <video id="teaser" width="500" height="200" autoplay="" loop="" muted="" playsinline=""
+              poster="https://ibc.imgix.net/ibc-website/home-edition/landing-section-video-poster-image_160(2x).jpg?auto=format,compress&amp;q=80"
+              class="teaser-video lazy-video">
+              <source data-src="https://cdn.ib.cricket/ibc-website/home-edition/ibc-feature-videos/ibc-teaser-video-ds.mp4"
+                type="video/mp4" src="https://cdn.ib.cricket/ibc-website/home-edition/ibc-feature-videos/ibc-teaser-video-ds.mp4">
+            </video>
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">iB Cricket Franchise App and Cricket League App</h2>
+          <p class="card-text">At iB Cricket, I played a key role in developing and launching two major applications. I built the Franchise App for
+          both iPadOS and iOS, providing a seamless and engaging user experience for franchise management. Additionally, I
+          developed the Cricket League App for both Android and iOS, enabling cricket enthusiasts to engage in virtual leagues
+          with ease. These projects involved leveraging cutting-edge technology and innovative design to deliver high-quality,
+          user-friendly applications.</p>
+          <a href="https://www.ib.cricket" class="card-link">Learn More</a>
         </div>
       </div>
-      <h3>iB Cricket Franchise App and Cricket League App</h3>
-      <p>At iB Cricket, I played a key role in developing and launching two major applications. I built the Franchise App for both iPadOS and iOS, providing a seamless and engaging user experience for franchise management. Additionally, I developed the Cricket League App for both Android and iOS, enabling cricket enthusiasts to engage in virtual leagues with ease. These projects involved leveraging cutting-edge technology and innovative design to deliver high-quality, user-friendly applications.</p>
-    </div>
-    <div class="visit-site">
-      <a id="download-button" class="btn-large waves-effect waves-light"
-        href="https://ib.cricket/" target="_blank">iB Cricket</a><br><br>
-    </div>
-
-
-      <div class="icon-block">
-        <div class="row" style="display: flex;align-items: center;justify-content: space-around">
-          <div class="col s16 m3">
-            <a href="https://assets-global.website-files.com/5be158df8b242005a6c3705c/5da578cccc6891d906c32b10_hero%25403x-p-1080.png" data-featherlight="https://assets-global.website-files.com/5be158df8b242005a6c3705c/5da578cccc6891d906c32b10_hero%25403x-p-1080.png" ><img src="https://assets-global.website-files.com/5be158df8b242005a6c3705c/5da578cccc6891d906c32b10_hero%25403x-p-1080.png"
-                width='500' height='400' alt="https://assets-global.website-files.com/5be158df8b242005a6c3705c/5da578cccc6891d906c32b10_hero%25403x-p-1080.png" class="portfolio-project"></a>
+ 
+        <div class="card">
+          <div class="carousel">
+            <img src="https://assets-global.website-files.com/5be158df8b242005a6c3705c/5da578cccc6891d906c32b10_hero%25403x-p-1080.png" class="active" alt="iB Cricket 1">
+           
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+          </div>
+          <div class="card-content">
+            <h2 class="card-title">CyberEye Research Labs and LoRaWAN technology</h2>
+            <p class="card-text">At Cybereye Labs, I developed a sophisticated web application for managing LoRaWAN technology IoT devices. This
+            application enabled seamless integration, monitoring, and control of IoT devices, enhancing connectivity and data
+            management capabilities. My work involved leveraging LoRaWAN protocols to ensure secure and efficient communication
+            between devices, contributing to the advancement of IoT technology and improving operational efficiency for various
+            applications.</p>
+            <a href="https://www.cybereye.io/our-model" class="card-link">Learn More</a>
           </div>
         </div>
-        <h3>At Cybereye Labs, I developed a sophisticated web application for managing LoRaWAN technology IoT devices. This application enabled seamless integration, monitoring, and control of IoT devices, enhancing connectivity and data management capabilities. My work involved leveraging LoRaWAN protocols to ensure secure and efficient communication between devices, contributing to the advancement of IoT technology and improving operational efficiency for various applications.</p>
-      </div>
-       <div class="visit-site">
-          <a id="download-button" class="btn-large waves-effect waves-light"
-            href="https://www.cybereye.io/our-model" target="_blank">CyberEye</a>
-       </div>
 
-        <div class="icon-block">
-      <div class="row" style="display: flex;align-items: center;justify-content: space-around">
-             <div class="col s16 m3">
-            <a href="https://play-lh.googleusercontent.com/6I9Ek5FCZ7r8aViAMlmLR7jt2PKR4zbmJiheBm61WoABPq1YmiQ2txxhkPlbuQly4l8=w5120-h2880-rw" data-featherlight="https://play-lh.googleusercontent.com/6I9Ek5FCZ7r8aViAMlmLR7jt2PKR4zbmJiheBm61WoABPq1YmiQ2txxhkPlbuQly4l8=w5120-h2880-rw" title="Oyna"><img src="https://play-lh.googleusercontent.com/6I9Ek5FCZ7r8aViAMlmLR7jt2PKR4zbmJiheBm61WoABPq1YmiQ2txxhkPlbuQly4l8=w5120-h2880-rw"
-                width='300' height='600' alt="https://play-lh.googleusercontent.com/6I9Ek5FCZ7r8aViAMlmLR7jt2PKR4zbmJiheBm61WoABPq1YmiQ2txxhkPlbuQly4l8=w5120-h2880-rw" class="portfolio-project"></a>
+          <div class="card">
+            <div class="carousel">
+              <img src="https://play-lh.googleusercontent.com/6I9Ek5FCZ7r8aViAMlmLR7jt2PKR4zbmJiheBm61WoABPq1YmiQ2txxhkPlbuQly4l8=w5120-h2880-rw" class="active" alt="Hiver 1">
+              <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource122/v4/c4/22/01/c422011f-6afe-895d-9655-83e5a2c2fa2f/5e574333-f078-46a1-819e-738a8128acb8_IOS_6.5_18.jpg/460x0w.webp" alt="Hiver 2">
+              <img src="https://play-lh.googleusercontent.com/-593nTqAQefCts3bxd4I6ByhZniOySRqwAffjlFWvqnih2zJROZZ_O_JLDDW47kZ--U=w5120-h2880-rw" alt="Hiver 3">
+              <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+              <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            </div>
+            <div class="card-content">
+              <h2 class="card-title">Hiver App</h2>
+              <p class="card-text">At Hiver, I built the Hiver app for both Android and iOS from scratch, leveraging my expertise in mobile development to
+              create a seamless user experience. Additionally, I extensively worked on integrating Gmail APIs, enhancing the app's
+              functionality and ensuring robust email management features for users. My contributions played a key role in providing
+              businesses with efficient tools to streamline their communication workflows.</p>
+              <a href="https://www.hiverhq.com" class="card-link">Learn More</a>
+            </div>
           </div>
-           <div class="col s16 m3">
-            <a href="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource122/v4/c4/22/01/c422011f-6afe-895d-9655-83e5a2c2fa2f/5e574333-f078-46a1-819e-738a8128acb8_IOS_6.5_18.jpg/460x0w.webp" data-featherlight="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource122/v4/c4/22/01/c422011f-6afe-895d-9655-83e5a2c2fa2f/5e574333-f078-46a1-819e-738a8128acb8_IOS_6.5_18.jpg/460x0w.webp" title="Oyna"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource122/v4/c4/22/01/c422011f-6afe-895d-9655-83e5a2c2fa2f/5e574333-f078-46a1-819e-738a8128acb8_IOS_6.5_18.jpg/460x0w.webp"
-                width='300' height='600' alt="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource122/v4/c4/22/01/c422011f-6afe-895d-9655-83e5a2c2fa2f/5e574333-f078-46a1-819e-738a8128acb8_IOS_6.5_18.jpg/460x0w.webp" class="portfolio-project"></a>
-          </div>
-           <div class="col s16 m3">
-            <a href="https://play-lh.googleusercontent.com/-593nTqAQefCts3bxd4I6ByhZniOySRqwAffjlFWvqnih2zJROZZ_O_JLDDW47kZ--U=w5120-h2880-rw" data-featherlight="https://play-lh.googleusercontent.com/-593nTqAQefCts3bxd4I6ByhZniOySRqwAffjlFWvqnih2zJROZZ_O_JLDDW47kZ--U=w5120-h2880-rw" title="Oyna"><img src="https://play-lh.googleusercontent.com/-593nTqAQefCts3bxd4I6ByhZniOySRqwAffjlFWvqnih2zJROZZ_O_JLDDW47kZ--U=w5120-h2880-rw"
-                width='300' height='600' alt="https://play-lh.googleusercontent.com/-593nTqAQefCts3bxd4I6ByhZniOySRqwAffjlFWvqnih2zJROZZ_O_JLDDW47kZ--U=w5120-h2880-rw" class="portfolio-project"></a>
-          </div>
-      </div>
-          
-      <h3>Hiver App</h3>
-      <p>At Hiver, I built the Hiver app for both Android and iOS from scratch, leveraging my expertise in mobile development to create a seamless user experience. Additionally, I extensively worked on integrating Gmail APIs, enhancing the app's functionality and ensuring robust email management features for users. My contributions played a key role in providing businesses with efficient tools to streamline their communication workflows.</p>
-    </div>
-    <div class="visit-site">
-      <a id="download-button" class="btn-large waves-effect waves-light"
-        href="https://hiverhq.com/" target="_blank">Hiver</a><br><br>
-    </div>
 
-            <div class="icon-block">
-      <div class="row" style="display: flex;align-items: center;justify-content: space-around">
-             <div class="col s16 m3">
-            <a href="https://play-lh.googleusercontent.com/Cyr0ATgamlwzdZolv0ELmtN8fQtqPVsl-Bba-Kwf-jW6pcO-pLc9tVqy8XdtncIUdGg=w5120-h2880-rw" data-featherlight="https://play-lh.googleusercontent.com/Cyr0ATgamlwzdZolv0ELmtN8fQtqPVsl-Bba-Kwf-jW6pcO-pLc9tVqy8XdtncIUdGg=w5120-h2880-rw" title="Oyna"><img src="https://play-lh.googleusercontent.com/Cyr0ATgamlwzdZolv0ELmtN8fQtqPVsl-Bba-Kwf-jW6pcO-pLc9tVqy8XdtncIUdGg=w5120-h2880-rw"
-                width='300' height='600' alt="https://play-lh.googleusercontent.com/Cyr0ATgamlwzdZolv0ELmtN8fQtqPVsl-Bba-Kwf-jW6pcO-pLc9tVqy8XdtncIUdGg=w5120-h2880-rw" class="portfolio-project"></a>
-          </div>
-           <div class="col s16 m3">
-            <a href="https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/e6/ae/6a/e6ae6af4-046b-4f9e-e5ac-bade3ba225ea/pr_source.png/460x0w.webp" data-featherlight="https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/e6/ae/6a/e6ae6af4-046b-4f9e-e5ac-bade3ba225ea/pr_source.png/460x0w.webp" title="Oyna"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/e6/ae/6a/e6ae6af4-046b-4f9e-e5ac-bade3ba225ea/pr_source.png/460x0w.webp"
-                width='300' height='600' alt="https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/e6/ae/6a/e6ae6af4-046b-4f9e-e5ac-bade3ba225ea/pr_source.png/460x0w.webp" class="portfolio-project"></a>
-          </div>
-           <div class="col s16 m3">
-            <a href="https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/d9/62/0c/d9620ca1-557c-cb40-7565-cd3218423d26/pr_source.png/460x0w.webp" data-featherlight="https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/d9/62/0c/d9620ca1-557c-cb40-7565-cd3218423d26/pr_source.png/460x0w.webp" title="Oyna"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/d9/62/0c/d9620ca1-557c-cb40-7565-cd3218423d26/pr_source.png/460x0w.webp"
-                width='300' height='600' alt="https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/d9/62/0c/d9620ca1-557c-cb40-7565-cd3218423d26/pr_source.png/460x0w.webp" class="portfolio-project"></a>
-          </div>
-      </div>
-          
-      <h3>Apollo 24/7 Health & Medicine</h3>
-      <p>At Apollo247 Health and Medicine, I have played a pivotal role in developing a groundbreaking iOS and Android application
-tailored for both patients and doctors. This innovative app revolutionized healthcare accessibility and convenience by
-seamlessly integrating audio and video consultation features. Patients can now connect with healthcare professionals
-from the comfort of their homes, enhancing accessibility, particularly for those with mobility constraints or living in
-remote areas.
-            </br>
-Additionally, Apollo247 app facilitates prescription and diagnostics ordering directly from the platform, streamlining the
-entire healthcare process. Patients can request prescriptions and schedule diagnostic tests with just a few taps,
-reducing wait times and administrative burdens. This feature not only enhances convenience but also ensures timely
-access to essential healthcare services.
-            </br>
-My contribution to building this app demonstrates a commitment to leveraging technology to improve healthcare
-delivery. By combining audio and video consultation capabilities with prescription and diagnostics ordering, you've
-empowered patients to take control of their healthcare journey while facilitating more efficient communication and
-collaboration between patients and healthcare providers. This app exemplifies Apollo247's dedication to digital
-innovation and patient-centric care.</p>
-    </div>
-    <div class="visit-site">
-      <a id="download-button" class="btn-large waves-effect waves-light"
-        href="https://www.apollo247.com/" target="_blank">Apollo 247</a><br><br>
-    </div>
+              <div class="card">
+                <div class="carousel">
+                  <img src="https://play-lh.googleusercontent.com/Cyr0ATgamlwzdZolv0ELmtN8fQtqPVsl-Bba-Kwf-jW6pcO-pLc9tVqy8XdtncIUdGg=w5120-h2880-rw" data-featherlight="https://play-lh.googleusercontent.com/Cyr0ATgamlwzdZolv0ELmtN8fQtqPVsl-Bba-Kwf-jW6pcO-pLc9tVqy8XdtncIUdGg=w5120-h2880-rw" class="active" alt="Apollo 24/7 1">
+                  <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/e6/ae/6a/e6ae6af4-046b-4f9e-e5ac-bade3ba225ea/pr_source.png/460x0w.webp" alt="Apollo 24/7 2">
+                  <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/d9/62/0c/d9620ca1-557c-cb40-7565-cd3218423d26/pr_source.png/460x0w.webp" alt="Apollo 24/7 3">
+                  <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                  <a class="next" onclick="changeSlide(1)">&#10095;</a>
+                </div>
+                <div class="card-content">
+                  <h2 class="card-title">Apollo 24/7</h2>
+                  <p class="card-text">At Apollo247 Health and Medicine, I have played a pivotal role in developing a groundbreaking iOS and Android
+                  application
+                  tailored for both patients and doctors. This innovative app revolutionized healthcare accessibility and convenience by
+                  seamlessly integrating audio and video consultation features. Patients can now connect with healthcare professionals
+                  from the comfort of their homes, enhancing accessibility, particularly for those with mobility constraints or living in
+                  remote areas.
+                  </br>
+                  Additionally, Apollo247 app facilitates prescription and diagnostics ordering directly from the platform, streamlining
+                  the
+                  entire healthcare process. Patients can request prescriptions and schedule diagnostic tests with just a few taps,
+                  reducing wait times and administrative burdens. This feature not only enhances convenience but also ensures timely
+                  access to essential healthcare services.
+                  </br>
+                  My contribution to building this app demonstrates a commitment to leveraging technology to improve healthcare
+                  delivery. By combining audio and video consultation capabilities with prescription and diagnostics ordering, you've
+                  empowered patients to take control of their healthcare journey while facilitating more efficient communication and
+                  collaboration between patients and healthcare providers. This app exemplifies Apollo247's dedication to digital
+                  innovation and patient-centric care.</p>
+                  <a href="https://www.apollo247.com" class="card-link">Learn More</a>
+                </div>
+              </div>
 
-         <div class="icon-block">
-      <div class="row" style="display: flex;align-items: center;justify-content: space-around">
-             <div class="col s16 m3">
-            <a href="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/03/66/fa/0366fa4a-05cb-82f3-a520-a4d7b3cf1bed/ec38df1f-2fc3-4b21-88cd-b02f74084f7f_2.jpg/460x0w.webp" data-featherlight="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/03/66/fa/0366fa4a-05cb-82f3-a520-a4d7b3cf1bed/ec38df1f-2fc3-4b21-88cd-b02f74084f7f_2.jpg/460x0w.webp" title="Oyna"><img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/03/66/fa/0366fa4a-05cb-82f3-a520-a4d7b3cf1bed/ec38df1f-2fc3-4b21-88cd-b02f74084f7f_2.jpg/460x0w.webp"
-                width='300' height='600' alt="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/03/66/fa/0366fa4a-05cb-82f3-a520-a4d7b3cf1bed/ec38df1f-2fc3-4b21-88cd-b02f74084f7f_2.jpg/460x0w.webp" class="portfolio-project"></a>
-          </div>
-           <div class="col s16 m3">
-            <a href="https://play-lh.googleusercontent.com/DK5WkNNqg65KDqWfk6qITZJXIDnOJXLDjUyJtYlJ3LpC_5lKW2XlPu6ChYkRtTQoPBI=w5120-h2880-rw" data-featherlight="https://play-lh.googleusercontent.com/DK5WkNNqg65KDqWfk6qITZJXIDnOJXLDjUyJtYlJ3LpC_5lKW2XlPu6ChYkRtTQoPBI=w5120-h2880-rw" title="Oyna"><img src="https://play-lh.googleusercontent.com/DK5WkNNqg65KDqWfk6qITZJXIDnOJXLDjUyJtYlJ3LpC_5lKW2XlPu6ChYkRtTQoPBI=w5120-h2880-rw"
-                width='300' height='600' alt="https://play-lh.googleusercontent.com/DK5WkNNqg65KDqWfk6qITZJXIDnOJXLDjUyJtYlJ3LpC_5lKW2XlPu6ChYkRtTQoPBI=w5120-h2880-rw" class="portfolio-project"></a>
-          </div>
-          
-      </div>
-          
-      <h3>Treebo Hotel Booking App</h3>
-      <p>Single-handedly building and maintaining the Treebo iOS and Android app. As a React Native developer, I am responsible for the
-entire app lifecycle, from conceptualization and design to development, testing, deployment, and ongoing maintenance.
-         </br>
-My responsibilities include:
-         </br>
-Conceptualization and Design: I involved in defining the app's features, user interface, and overall
-user experience, wireframing, prototyping, and creating design mockups to align with Treebo's
-brand identity and user expectations.
-         </br>
-Development: As the sole developer, I wrote the codebase that works on both the iOS and Android versions of the app. I implemented
-key features like booking functionality, reservation management, user authentication, payment processing, and
-integration with backend systems.
-         </br>
-Testing: I conducted thorough testing of the app to ensure functionality, usability, and performance across different
-devices, screen sizes, and operating system versions. This involved both manual testing and automated testing using appium
-methodologies to identify and address any bugs or issues.
-         </br>
-Deployment: I managed the process of deploying app updates to the Apple App Store and Google Play Store, adhering to
-platform guidelines and ensuring a smooth rollout to users.
-         </br>
-Maintenance and Updates: After the app was launched, I continued to monitor its performance and address any issues
-reported by users. I also implemented regular updates to introduce new features, improve existing functionality, and
-address compatibility issues with new OS versions or devices.
-         </br>
-My ability to handle all aspects of app development single-handedly demonstrates my technical expertise,
-problem-solving skills, and self-reliance. It also highlights my commitment to delivering a high-quality product that
-meets the needs of Treebo Hotels' guests and contributes to the company's success in the competitive hospitality
-industry.</p>
-    </div>
-    <div class="visit-site">
-      <a id="download-button" class="btn-large waves-effect waves-light"
-        href="https://treebo.com/" target="_blank">Treebo</a><br><br>
-    </div>
 
-          <div class="icon-block">
-      <div class="row" style="display: flex;align-items: center;justify-content: space-around">
-         <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="col s16 m3">
-            <a href="https://gdm-catalog-fmapi-prod.imgix.net/ProductScreenshot/4e433e3e-38f6-4b9d-a002-f888009922ea.png" data-featherlight="https://gdm-catalog-fmapi-prod.imgix.net/ProductScreenshot/4e433e3e-38f6-4b9d-a002-f888009922ea.png" title="Oyna"><img src="https://gdm-catalog-fmapi-prod.imgix.net/ProductScreenshot/4e433e3e-38f6-4b9d-a002-f888009922ea.png"
-                width='100%' height='400' alt="https://gdm-catalog-fmapi-prod.imgix.net/ProductScreenshot/4e433e3e-38f6-4b9d-a002-f888009922ea.png" class="portfolio-project"></a>
-          </div>
-           <div class="col s16 m3">
-            <a href="https://gdm-catalog-fmapi-prod.imgix.net/ProductScreenshot/641e7dca-3855-4660-8988-39fb13effc11.png" data-featherlight="https://gdm-catalog-fmapi-prod.imgix.net/ProductScreenshot/641e7dca-3855-4660-8988-39fb13effc11.png" title="Oyna"><img src="https://gdm-catalog-fmapi-prod.imgix.net/ProductScreenshot/641e7dca-3855-4660-8988-39fb13effc11.png"
-                width='100%' height='400' alt="https://gdm-catalog-fmapi-prod.imgix.net/ProductScreenshot/641e7dca-3855-4660-8988-39fb13effc11.png" class="portfolio-project"></a>
-          </div>
-    </div>
+<div class="card">
+  <div class="carousel">
+    <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/03/66/fa/0366fa4a-05cb-82f3-a520-a4d7b3cf1bed/ec38df1f-2fc3-4b21-88cd-b02f74084f7f_2.jpg/460x0w.webp" class="active" alt="Treebo Hotels 1">
+    <img src="https://play-lh.googleusercontent.com/DK5WkNNqg65KDqWfk6qITZJXIDnOJXLDjUyJtYlJ3LpC_5lKW2XlPu6ChYkRtTQoPBI=w5120-h2880-rw" alt="Treebo Hotels 2">
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
   </div>
-          
+  <div class="card-content">
+    <h2 class="card-title">Treebo Hotel Booking App</h2>
+    <p class="card-text">Single-handedly building and maintaining the Treebo iOS and Android app. As a React Native developer, I am responsible
+    for the
+    entire app lifecycle, from conceptualization and design to development, testing, deployment, and ongoing maintenance.
+    </br>
+    My responsibilities include:
+    </br>
+    Conceptualization and Design: I involved in defining the app's features, user interface, and overall
+    user experience, wireframing, prototyping, and creating design mockups to align with Treebo's
+    brand identity and user expectations.
+    </br>
+    Development: As the sole developer, I wrote the codebase that works on both the iOS and Android versions of the app. I
+    implemented
+    key features like booking functionality, reservation management, user authentication, payment processing, and
+    integration with backend systems.
+    </br>
+    Testing: I conducted thorough testing of the app to ensure functionality, usability, and performance across different
+    devices, screen sizes, and operating system versions. This involved both manual testing and automated testing using
+    appium
+    methodologies to identify and address any bugs or issues.
+    </br>
+    Deployment: I managed the process of deploying app updates to the Apple App Store and Google Play Store, adhering to
+    platform guidelines and ensuring a smooth rollout to users.
+    </br>
+    Maintenance and Updates: After the app was launched, I continued to monitor its performance and address any issues
+    reported by users. I also implemented regular updates to introduce new features, improve existing functionality, and
+    address compatibility issues with new OS versions or devices.
+    </br>
+    My ability to handle all aspects of app development single-handedly demonstrates my technical expertise,
+    problem-solving skills, and self-reliance. It also highlights my commitment to delivering a high-quality product that
+    meets the needs of Treebo Hotels' guests and contributes to the company's success in the competitive hospitality
+    industry.</p>
+    <a href="https://www.treebo.com" class="card-link">Learn More</a>
+  </div>
+</div>
+
+    <div class="card">
+      <div class="carousel">
+        <img src="https://gdm-catalog-fmapi-prod.imgix.net/ProductScreenshot/4e433e3e-38f6-4b9d-a002-f888009922ea.png" class="active" alt="Hotel Superhero 1">
+        <img src="https://gdm-catalog-fmapi-prod.imgix.net/ProductScreenshot/641e7dca-3855-4660-8988-39fb13effc11.png" alt="Hotel Superhero 2">
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
       </div>
-          
-      <h3>Hotel SuperHero</h3>
-      <p>At Hotel Super Hero, I led the development of a cutting-edge SaaS-based application utilizing GraphQL, Node.js, and React.js technologies. This involved architecting the system, implementing GraphQL APIs with Node.js on the backend, and building a dynamic and intuitive user interface with React.js on the frontend. My work ensured seamless integration, optimal performance, and robust security, empowering hoteliers to streamline operations and deliver exceptional guest experiences.</p>
+      <div class="card-content">
+        <h2 class="card-title">Hotel Superhero</h2>
+        <p class="card-text">At Hotel Super Hero, I led the development of a cutting-edge SaaS-based application utilizing GraphQL, Node.js, and
+        React.js technologies. This involved architecting the system, implementing GraphQL APIs with Node.js on the backend, and
+        building a dynamic and intuitive user interface with React.js on the frontend. My work ensured seamless integration,
+        optimal performance, and robust security, empowering hoteliers to streamline operations and deliver exceptional guest
+        experiences.</p>
+        <a href="https://www.hotelsuperhero.com" class="card-link">Learn More</a>
+      </div>
     </div>
-    <div class="visit-site">
-      <a id="download-button" class="btn-large waves-effect waves-light"
-        href="https://hotelsuperhero.com/" target="_blank">Hotel SuperHero</a><br><br>
-    </div>
+
       <!-- Dialogs -->
       <div class="row tall-row">
         <div class="col-lg-12">
@@ -299,5 +341,15 @@ industry.</p>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script>
+          let currentSlide = 0;
+
+          function changeSlide(direction) {
+            let slides = document.querySelectorAll('.carousel img.active');
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+          }
+        </script>
   </body>
 </html>
