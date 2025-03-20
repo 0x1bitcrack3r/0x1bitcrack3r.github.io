@@ -19,9 +19,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
  
-    <script type="application/ld+json">
+<script type="application/ld+json">
 {
-  "@context": "https://vishnuramineni.com",
+  "@context": "https://schema.org",  // Fixed: Use schema.org, not your domain
   "@type": "Person",
   "name": "Vishnu Ramineni",
   "alternateName": "0x1bitcrack3r",
@@ -31,29 +31,63 @@
   "sameAs": [
     "https://github.com/0x1bitcrack3r",
     "https://scholar.google.com/citations?hl=en&user=V_7vk-kAAAAJ",
-      "https://ieeexplore.ieee.org/author/37086027427",
-      "https://www.researchgate.net/profile/Vishnu-Ramineni",
+    "https://ieeexplore.ieee.org/author/37086027427",
+    "https://www.researchgate.net/profile/Vishnu-Ramineni",
     "https://www.linkedin.com/in/vishnu-ramineni-7a581383",
     "https://adplist.org/mentors/vishnu-ramineni",
-      "https://medium.com/@0x1bitcrack3r"
+    "https://medium.com/@0x1bitcrack3r"  // Removed trailing comma
   ],
-  "knowsAbout": ["Digital Accessibility", "A11y", "HCI", "Health Tech", "Security Software Engineering", "AI", "Machine Learning", "Cybersecurity", "JavaScript", "Electron Apps", "iOS app Development", "Android app Development", "React Native", "Cross-Platform Development"],
-         "memberOf": [{
-    "@type": "Organization",
-    "name": "SigmaXi",
-    "url": "http://sigmaxi.org/"
-  },
-       {
-    "@type": "Organization",
-    "name": "IEEE",
-    "url": "https://www.ieee.org/"
-  },
-        {
-    "@type": "Organization",
-    "name": "Hackathon Raptors",
-    "url": "https://www.raptors.dev/"
-  }]
-
+  "knowsAbout": [
+    "Digital Accessibility",
+    "A11y (Web Accessibility)",
+    "Human-Computer Interaction (HCI)",
+    "Health Technology",
+    "Security Software Engineering",
+    "Artificial Intelligence",
+    "Machine Learning",
+    "Cybersecurity",
+    "JavaScript",
+    "Electron Apps",
+    "iOS App Development",
+    "Android App Development",
+    "React Native",
+    "Cross-Platform Development",
+    // Optional: Add URLs for formal concepts (e.g., Wikidata links)
+    "https://www.w3.org/WAI/standards-guidelines/",
+    "https://www.wikidata.org/wiki/Q189223"
+  ],
+  "memberOf": [
+    {
+      "@type": "OrganizationRole",
+      "roleName": "Member",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "SigmaXi",
+        "url": "https://www.sigmaxi.org/"  // Fixed: Use HTTPS
+      }
+    },
+    {
+      "@type": "OrganizationRole",
+      "roleName": "Member",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "IEEE",
+        "url": "https://www.ieee.org/"
+      }
+    },
+    {
+      "@type": "OrganizationRole",
+      "roleName": "Member",
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Hackathon Raptors",
+        "url": "https://www.raptors.dev/"
+      }
+    }
+  ],
+  "description": "Vishnu Ramineni (a.k.a 0x1bitcrack3r) is a Senior Staff Software Engineer with over 10 years of experience specializing in scalable applications, AI, digital accessibility, cross-platform mobile and web development, IoT, and cybersecurity. An accomplished frontend developer and React Native specialist, he has led high-impact projects for companies like Albertsons, Apollo 24/7, and Hiver. A passionate security enthusiast, Vishnu ranked in the top 10 at BountyCon at Nullcon 2017. He is also a recognized mentor, an ADPList Top 50 Mentor in AI/ML Engineering, and an IEEE Senior Member. He actively contributes as a peer reviewer for IEEE conferences, a judge at global hackathons, and a speaker at tech events like ReactJS Dallas and Bangalore.",
+  "email": "0x1bitcrack3r@gmail.com",
+  "alumniOf": [{"@type": "CollegeOrUniversity", "name": "University of North Texas", "url": "https://unt.edu"},{"@type": "CollegeOrUniversity", "name": "Vellore Institute of Technology", "url": "https://vit.ac.in"}]
 }
 </script>
     <title>Vishnu Ramineni aka 0x1bitcrack3r | Senior Staff Software Engineer & Digital Accessibility Researcher & A11y & HCI & Health Tech & AI ML Researcher</title>
