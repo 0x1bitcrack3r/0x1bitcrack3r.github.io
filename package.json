@@ -1,5 +1,6 @@
 {
-      "name": "Hacker-Themed Creative Portfolio (Community)",
+      "name": "0x1bitcrack3r",
+      "homepage": "0x1bitcrack3r.github.io",
       "version": "0.1.0",
       "private": true,
       "dependencies": {
@@ -55,8 +56,9 @@
       "scripts": {
             "dev": "vite",
             "build": "vite build",
-            "postbuild": "cp build/index.html build/404.html || true",
+            
             "preview": "vite preview",
+            "predeploy": "npm run build",
             "deploy": "gh-pages -d build"
       }
 }

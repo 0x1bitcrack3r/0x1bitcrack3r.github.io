@@ -4,6 +4,7 @@
   import path from 'path';
 
   export default defineConfig({
+      base: './', // This line is already present and should be retained
     plugins: [react()],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
