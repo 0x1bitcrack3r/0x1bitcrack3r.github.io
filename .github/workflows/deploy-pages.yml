@@ -1,92 +1,43 @@
-name: Build and Deploy to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
-      - master
-  workflow_dispatch: {}
+    branches: [master]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v3
 
-      - name: Setup Node.js 20
-        uses: actions/setup-node@v4
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
           node-version: "20"
 
-      - name: Cache node modules
-        uses: actions/cache@v4
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Build
         run: npm run build
 
-      - name: Copy index.html to 404.html for SPA routing
-        run: |
-          if [ -f ./build/index.html ]; then cp ./build/index.html ./build/404.html; fi
-
-      - name: Check GH_PAGES_TOKEN presence
-        run: |
-          if [ -z "$GH_PAGES_TOKEN" ]; then
-            echo "GH_PAGES_TOKEN is NOT set"
-            exit 0
-          else
-            echo "GH_PAGES_TOKEN is set"
-          fi
-        env:
-          GH_PAGES_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
-
-      - name: Diagnostic - show token scopes and repo access
-        if: always()
-        run: |
-          echo "Checking token access via GitHub API..."
-          resp_headers=$(mktemp)
-          status=$(curl -s -o /dev/null -w "%{http_code}" -D "$resp_headers" -H "Authorization: token $GH_PAGES_TOKEN" https://api.github.com/repos/0x1bitcrack3r/0x1bitcrack3r.github.io)
-          echo "HTTP status: $status"
-          echo "Response headers (filtered):"
-          grep -i "x-oauth-scopes\|x-ratelimit-remaining\|x-ratelimit-reset" "$resp_headers" || true
-          echo "---" 
-          echo "If status is 200, the token can read repo info; if 403, token lacks repo access or is blocked."
-        env:
-          GH_PAGES_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
-
-      - name: Diagnostic - try git ls-remote with token (no push)
-        if: always()
-        run: |
-          echo "Testing remote access with git ls-remote (no push)"
-          set +e
-          # Git will use the token in the URL for auth; output is masked by Actions for secrets
-          git ls-remote "https://x-access-token:${GH_PAGES_TOKEN}@github.com/0x1bitcrack3r/0x1bitcrack3r.github.io.git" HEAD || echo "git ls-remote failed"
-          set -e
-        env:
-          GH_PAGES_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
-
-      - name: Configure Pages
-        uses: actions/configure-pages@v3
-
-      - name: Upload Pages artifact
-        # Use v3 which depends on the non-deprecated artifact uploader
-        uses: actions/upload-pages-artifact@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          path: ./build
+          path: "./build" # or your build output directory
 
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
+        id: deployment
+        uses: actions/deploy-pages@v2
