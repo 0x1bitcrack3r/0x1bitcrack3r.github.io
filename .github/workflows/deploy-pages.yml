@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: read
+      contents: write
       pages: write
       id-token: write
 
@@ -43,13 +43,50 @@ jobs:
         run: |
           if [ -f ./build/index.html ]; then cp ./build/index.html ./build/404.html; fi
 
+      - name: Check GH_PAGES_TOKEN presence
+        run: |
+          if [ -z "$GH_PAGES_TOKEN" ]; then
+            echo "GH_PAGES_TOKEN is NOT set"
+            exit 0
+          else
+            echo "GH_PAGES_TOKEN is set"
+          fi
+        env:
+          GH_PAGES_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
+
+      - name: Diagnostic - show token scopes and repo access
+        if: always()
+        run: |
+          echo "Checking token access via GitHub API..."
+          resp_headers=$(mktemp)
+          status=$(curl -s -o /dev/null -w "%{http_code}" -D "$resp_headers" -H "Authorization: token $GH_PAGES_TOKEN" https://api.github.com/repos/0x1bitcrack3r/0x1bitcrack3r.github.io)
+          echo "HTTP status: $status"
+          echo "Response headers (filtered):"
+          grep -i "x-oauth-scopes\|x-ratelimit-remaining\|x-ratelimit-reset" "$resp_headers" || true
+          echo "---" 
+          echo "If status is 200, the token can read repo info; if 403, token lacks repo access or is blocked."
+        env:
+          GH_PAGES_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
+
+      - name: Diagnostic - try git ls-remote with token (no push)
+        if: always()
+        run: |
+          echo "Testing remote access with git ls-remote (no push)"
+          set +e
+          # Git will use the token in the URL for auth; output is masked by Actions for secrets
+          git ls-remote "https://x-access-token:${GH_PAGES_TOKEN}@github.com/0x1bitcrack3r/0x1bitcrack3r.github.io.git" HEAD || echo "git ls-remote failed"
+          set -e
+        env:
+          GH_PAGES_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
+
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token:
-            ${{ secrets.GITHUB_TOKEN }}
-            # If the default GITHUB_TOKEN is denied, create a Personal Access Token (repo scope)
-            # and add it as a repository secret named GH_PAGES_TOKEN, then uncomment the line below
+          # NOTE: If your repository or org blocks the default GITHUB_TOKEN from pushing,
+          # create a Personal Access Token (classic) with `repo` scope and add it as a
+          # repository secret named `GH_PAGES_TOKEN`. The action will use the token
+          # below via `personal_token` when present. Do NOT store the PAT in code.
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           personal_token: ${{ secrets.GH_PAGES_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./build

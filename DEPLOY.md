@@ -57,3 +57,31 @@ npm run deploy
 - This site uses Formspree for contact form handling (client-side). Set `VITE_FORMSPREE_ID` in your `.env` before building to ensure the contact form posts to your Formspree endpoint.
 
 If you want, I can add a short troubleshooting checklist or set up a custom domain CNAME file for you.
+
+## CI: Create a Personal Access Token (PAT) and add `GH_PAGES_TOKEN`
+
+If your GitHub Actions run fails with a git push 403 (permission denied to `github-actions[bot]`), create a Personal Access Token (PAT) and add it as a repository secret so the deploy action can push to `gh-pages`.
+
+1. Create a Personal Access Token (classic)
+
+- Go to your GitHub account Settings → Developer settings → Personal access tokens → Tokens (classic) → Generate new token.
+- Give the token a descriptive name, e.g. `gh-pages-deploy-token`.
+- Expiration: choose an expiration (30/90/Custom) or `No expiration` (rotate regularly if you choose no expiration).
+- Scopes: check `repo` (this gives the token permission to push to branches). For minimal privileges ensure the token can write to the repository.
+- Click **Generate token** and copy the token value now — you will not be able to see it again.
+
+2. Add the token as a repository secret
+
+- Go to your repository on GitHub → Settings → Secrets and variables → Actions → New repository secret.
+- Name the secret: `GH_PAGES_TOKEN`
+- Paste the token value you copied and save.
+
+3. Re-run the workflow
+
+- Go to Actions → "Build and Deploy to GitHub Pages" → select the workflow and click **Run workflow** (choose `master` or `main`), or push a new commit to trigger the workflow.
+
+Notes & security
+
+- If your repository is part of an organization, org policies may restrict creating PATs or using them in Actions — check with your org admin if needed.
+- Rotate tokens regularly and remove the token if you no longer need CI pushes.
+- If you prefer not to use a PAT, you can deploy locally with `npm run deploy` (push from your machine with your credentials) as a quick alternative.
