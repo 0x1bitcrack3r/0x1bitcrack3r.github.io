@@ -83,8 +83,8 @@ jobs:
         uses: actions/configure-pages@v3
 
       - name: Upload Pages artifact
-        # Use v2 to avoid deprecated actions/upload-artifact v3 usage
-        uses: actions/upload-pages-artifact@v2
+        # Use v3 which depends on the non-deprecated artifact uploader
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./build
 
