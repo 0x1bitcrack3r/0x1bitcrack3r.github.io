@@ -46,6 +46,10 @@ jobs:
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token:
+            ${{ secrets.GITHUB_TOKEN }}
+            # If the default GITHUB_TOKEN is denied, create a Personal Access Token (repo scope)
+            # and add it as a repository secret named GH_PAGES_TOKEN, then uncomment the line below
+          personal_token: ${{ secrets.GH_PAGES_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./build
