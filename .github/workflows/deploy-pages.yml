@@ -79,14 +79,13 @@ jobs:
         env:
           GH_PAGES_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
 
-      - name: Deploy to Pages (publish to master)
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Configure Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          # NOTE: If your repository or org blocks the default GITHUB_TOKEN from pushing,
-          # create a Personal Access Token (classic) with `repo` scope and add it as a
-          # repository secret named `GH_PAGES_TOKEN`. The action will use the token
-          # below via `personal_token` when present. Do NOT store the PAT in code.
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          personal_token: ${{ secrets.GH_PAGES_TOKEN }}
-          publish_branch: master
-          publish_dir: ./build
+          path: ./build
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
