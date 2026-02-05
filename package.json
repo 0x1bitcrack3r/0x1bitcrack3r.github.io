@@ -55,7 +55,7 @@
       },
       "scripts": {
             "dev": "vite",
-            "build": "vite build && cp CNAME build/CNAME",
+            "build": "vite build && cp CNAME build/CNAME && mkdir -p build/images && cp images/VishnuRamineni.jpeg build/images/",
             
             "preview": "vite preview",
             "predeploy": "npm run build",
