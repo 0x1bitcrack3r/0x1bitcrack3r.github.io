@@ -88,7 +88,7 @@ export function HeroSection({ onSectionChange }: HeroSectionProps) {
                 frameworks, and strong architectural principles to deliver
                 impactful, future-ready experiences.
               </div>
-              <div className="text-primary">
+              <div className="text-primary wrap-text">
                 <span className="text-muted-foreground">$</span> echo "{text}"
                 {showCursor && <span className="text-primary">_</span>}
               </div>
